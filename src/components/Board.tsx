@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Card from './Card';
+import Card from './Card.tsx';
 import getProperties from '../Utils.tsx';
 
 const Board = () => {
@@ -134,13 +134,13 @@ const Board = () => {
             <li key={idx} style={{ position: "relative", paddingBottom: "10em" }}>
               <div>
                 <div style={{ paddingRight: "2em" }}>
-                  <Card number={a[0]} selected={false} small={true} />
+                  <Card value={a[0]} selected={false} small={true} />
                 </div>
                 <div style={{ paddingRight: "2em" }}>
-                  <Card number={a[1]} selected={false} small={true} />
+                  <Card value={a[1]} selected={false} small={true} />
                 </div>
                 <div style={{ paddingRight: "2em" }}>
-                  <Card number={a[2]} selected={false} small={true} />
+                  <Card value={a[2]} selected={false} small={true} />
                 </div>
               </div>
             </li>

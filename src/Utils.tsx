@@ -2,11 +2,11 @@
 // [n,c,f,s]
 
 function getProperties(value: number): Array<number> {
-  const number = Math.floor(value / 27)
-  const color = Math.floor((value - (number * 27)) / 9)
-  const fill = Math.floor((value - (number * 27) - (color * 9)) / 3)
-  const shape = value - (number * 27) - (color * 9) - (fill * 3)
-  return [number, color, fill, shape]
+  const numSymbols = Math.floor(value / 27)
+  const color = Math.floor((value - (numSymbols * 27)) / 9)
+  const fill = Math.floor((value - (numSymbols * 27) - (color * 9)) / 3)
+  const shape = value - (numSymbols * 27) - (color * 9) - (fill * 3)
+  return [numSymbols, color, fill, shape]
 }
 
 /* function getCardFromProperties(properties: Array<number>): number {

@@ -9,7 +9,8 @@ import getProperties from '../Utils.tsx';
 //
 
 const Card = React.memo((props) => {
-  const [number, color, fill, shape] = getProperties(props.value)
+  debugger;
+  const [numSymbols, color, fill, shape]: Array<number> = getProperties(props.value)
   const getCardSymbols = (c, f, s) => {
     let name = ""
     switch (s) {
@@ -49,7 +50,8 @@ const Card = React.memo((props) => {
   }
 
   const pathName = getCardSymbols(color, fill, shape)
-  const symbols = Array.from(Array(number + 1).keys()).map(i => {
+  console.log(numSymbols)
+  const symbols = Array.from(Array(numSymbols + 1).keys()).map(i => {
     return <img key={i} src={require('../images/' + pathName)} />
   })
 
