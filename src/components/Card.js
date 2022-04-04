@@ -1,6 +1,6 @@
 import React from "react";
 import './Card.css';
-import getVariants from '../Utils.js';
+import getProperties from '../Utils.js';
 
 // TODO: 
 // 1) unselect after replacing
@@ -9,7 +9,7 @@ import getVariants from '../Utils.js';
 //
 
 const Card = React.memo((props) => {
-  const [number, color, fill, shape] = getVariants(props.number)
+  const [number, color, fill, shape] = getProperties(props.value)
   const getCardSymbols = (c, f, s) => {
     let name = ""
     switch (s) {
