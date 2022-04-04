@@ -122,8 +122,8 @@ const Board: React.FC<any> = () => {
 
     return (
         <>
-            <h1 style={{ textAlign: "center" }}>Board </h1>
-            <h4 style={{ textAlign: "center" }}>{validSetsFound} </h4>
+            <h1 style={{ textAlign: "center" }}>Sets Found </h1>
+            <h3 style={{ textAlign: "center" }}>{validSetsFound} </h3>
             <div style={{ display: "flex", justifyContent: "center" }}>
                 <table>
                     <tbody>
