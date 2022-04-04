@@ -1,4 +1,4 @@
-import Board from './components/Board.js'
+import Board from './components/Board.tsx'
 import React from 'react';
 
 
