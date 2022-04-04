@@ -1,5 +1,6 @@
 
 // [n,c,f,s]
+
 const getProperties = (value) => {
   const number = Math.floor(value / 27)
   const color = Math.floor((value - (number * 27)) / 9)
@@ -13,6 +14,5 @@ const getCardFromProperties = (properties) => {
   return (number * 27) + (color * 9) + (fill * 3) + shape
 }
 
-export default getProperties
-export default getCardFromProperties
+export default {getProperties, getCardFromProperties}
 
