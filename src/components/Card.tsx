@@ -9,7 +9,6 @@ import getProperties from '../Utils.tsx';
 //
 
 const Card = React.memo((props) => {
-  debugger;
   const [numSymbols, color, fill, shape]: Array<number> = getProperties(props.value)
   const getCardSymbols = (c, f, s) => {
     let name = ""
