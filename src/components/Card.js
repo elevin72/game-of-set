@@ -1,6 +1,6 @@
 import React from "react";
 import './Card.css';
-import getProperties from '../Utils.js';
+import getProperties from '../Utils.tsx';
 
 // TODO: 
 // 1) unselect after replacing

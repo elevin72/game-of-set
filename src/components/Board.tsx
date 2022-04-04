@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Card from './Card.js';
-import getProperties from '../Utils.js';
+import Card from './Card';
+import getProperties from '../Utils.tsx';
 
 const Board = () => {
 
@@ -174,12 +174,12 @@ const isSet = (cards) => {
   return set
 }
 
-const getThirdCard = (card1, card2) => {
-  const [n1, c1, f1, s1] = getProperties(card1)
-  const [n2, c2, f2, s2] = getProperties(card2)
-  const properties = [getThirdValue(n1, n2), getThirdValue(c1, c2), getThirdValue(f1, f2), getThirdValue(s1, s2)]
-  return getCardFromProperties(properties)
-}
+// const getThirdCard = (card1, card2) => {
+//   const [n1, c1, f1, s1] = getProperties(card1)
+//   const [n2, c2, f2, s2] = getProperties(card2)
+//   const properties = [getThirdValue(n1, n2), getThirdValue(c1, c2), getThirdValue(f1, f2), getThirdValue(s1, s2)]
+//   return getCardFromProperties(properties)
+// }
 
 const getThirdValue = (v1, v2) => {
   return (3 - ((v1 + v2) % 3)) % 3
