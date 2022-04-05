@@ -1,6 +1,6 @@
 import React from "react";
 import './Card.css';
-import getProperties from '../Utils.tsx';
+import {getProperties} from './Utils.tsx';
 
 // TODO: 
 // 1) unselect after replacing
@@ -61,18 +61,14 @@ const Card: React.FC<CardProps> = React.memo((props) => {
     })
 
 
-    /* const symbols = []
-    for (let i = 0; i < number + 1; i++) {
-      symbols.push(<img key={i} src={require('../images/' + pathName)} />)
-    } */
     const style = {
         borderRadius: "25px",
         border: props.selected ? "4px solid #fcba03" : "4px solid #ababab",
-        padding: "20px",
+        padding: "2em",
         float: "left",
         textAlign: "center",
-        width: props.small ? "110px" : "200px",
-        height: props.small ? "80px" : "125px"
+        width: props.small ? "8em" : "12em",
+        height: props.small ? "5em" : "8em"
     } as const;
 
     return (
