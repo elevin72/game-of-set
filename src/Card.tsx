@@ -57,7 +57,7 @@ const Card: React.FC<CardProps> = React.memo((props) => {
     const pathName = getCardSymbols(color, fill, shape)
     console.log(numSymbols)
     const symbols = Array.from(Array(numSymbols + 1).keys()).map(i => {
-        return <img key={i} src={require('../images/' + pathName)} />
+        return <img key={i} src={require('./images/' + pathName)} />
     })
 
 
