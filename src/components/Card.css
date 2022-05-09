@@ -2,6 +2,7 @@
 
 .card {
   border-radius: 25px;
+  background-color: transparent;
   border: 4px solid #ababab;
   padding: 20px;
   float: left;

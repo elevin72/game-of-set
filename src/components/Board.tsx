@@ -38,6 +38,7 @@ const Board: React.FC<any> = () => {
         if (selectedCards.length === 3) { // 3 are selected
             if (isSet(selectedCards.map(card => card.value))) { // and they are a set
                 setValidSetsFound(validSetsFound + 1)
+                setShowAnswers(!showAnswers)
                 if (newInPlay.length > 12 || deck.length === 0) { // dont replace from deck
                     newInPlay = newInPlay
                         .filter(card => !card.isSelected)
@@ -100,6 +101,16 @@ const Board: React.FC<any> = () => {
     // how many row go in the board
     const numRows = Array.from(Array(inPlay.length / 3).keys())
 
+    const cardStyle = {
+        backgroundColor: "transparent",
+        border: "none",
+        padding: 1
+    }
+
+    const buttonsStyle = {
+        fontSize: 18
+    }
+
     const cards = (
         <>
             {numRows.map((row) => (
@@ -108,7 +119,7 @@ const Board: React.FC<any> = () => {
                         const index = row * 3 + offset;
                         return (
                             <th key={index}>
-                                <button onClick={() => toggleCard(index)}>
+                                <button onClick={() => toggleCard(index)} style={cardStyle} >
                                     <Card value={inPlay[index].value} selected={inPlay[index].isSelected} small={false} />
                                 </button>
                             </th>
@@ -130,10 +141,12 @@ const Board: React.FC<any> = () => {
                     </tbody>
                 </table>
             </div>
-            <button onClick={addThreeCards}>add three cards</button>
-            <button onClick={() => { setShowAnswers(!showAnswers) }}>
-                {showAnswers ? 'hide answers' : 'find all sets'}
-            </button>
+            <div >
+                <button onClick={addThreeCards} style={buttonsStyle} >add three cards</button>
+                <button onClick={() => { setShowAnswers(!showAnswers) }} style={buttonsStyle}>
+                    {showAnswers ? 'hide answers' : 'find all sets'}
+                </button>
+            </div>
             <ol>
                 {showAnswers && buildSets(findAllSetsFast2(inPlay))}
             </ol>
